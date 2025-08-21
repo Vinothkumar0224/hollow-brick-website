@@ -2,31 +2,183 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ponkulanthai Hollow Bricks</title>
-    <link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ponkulanthai Hollow Bricks</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="head">
-                <h3>Ponkulanthai Hollow Bricks</h3>
-            </div>
-            <div class="header-nav">
-                <nav>
-                    <ul>
-                        <li><a>About</a></li>
-                        <li><a>Products</a></li>
-                        <li>Gallery</li>
-                        <li>Contact Us</li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
+  <div class="container">
+    <div class="header">
+      <div class="head">
+        <h3>Ponkulanthai Hollow Bricks</h3>
+      </div>
+      <div class="header-nav">
+        <nav>
+          <ul>
+            <li><a>About</a></li>
+            <li><a>Products</a></li>
+            <li>Gallery</li>
+            <li>Contact Us</li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    
+  </div>
+  <div class="carousel">
+    <div class="slides">
+      <!-- Radio buttons -->
+      <input type="radio" name="radio-btn" id="radio1" checked>
+      <input type="radio" name="radio-btn" id="radio2">
+      <input type="radio" name="radio-btn" id="radio3">
+      <input type="radio" name="radio-btn" id="radio4">
+
+      <!-- Slide 1 -->
+      <div class="slide first">
+        <img src="../Images/IMG_8923.jpg" alt="Slide 1">
+        <div class="content">
+          <h2>🎉 Special Offer!</h2>
+          <p>Buy 2 Hollow Bricks, Get 1 Free</p>
+          <button>Shop Now</button>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="../Images/IMG_8918.jpg" alt="Slide 2">
+        <div class="content">
+          <h2>🔥 Limited Time</h2>
+          <p>20% Off on Bulk Orders</p>
+          <button>Order Today</button>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="../Images/slide-3.jpg" alt="Slide 3">
+        <div class="content">
+          <h2>🚚 Free Delivery</h2>
+          <p>On Orders Above 500 Bricks</p>
+          <button>Grab Deal</button>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide">
+        <img src="../Images/slide-4.jpg" alt="Slide 4">
+        <div class="content">
+          <h2>🏗️ New Arrivals</h2>
+          <p>Check out our latest strong bricks</p>
+          <button>Explore</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Manual navigation -->
+    <div class="navigation-manual">
+      <label for="radio1" class="manual-btn"></label>
+      <label for="radio2" class="manual-btn"></label>
+      <label for="radio3" class="manual-btn"></label>
+      <label for="radio4" class="manual-btn"></label>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About</h2>
+    <div class="about-container">
+      <div class="about-text">
+        <p>
+          At Ponkulanthai Hollow Bricks Industry, we specialize in manufacturing high-quality hollow bricks that are
+          durable, eco-friendly, and cost-effective. With a focus on innovation and sustainability, we provide
+          construction solutions that meet modern building standards while ensuring strength and reliability.
+        </p>
+        <p>
+          Our bricks are made using advanced technology and premium raw materials, offering excellent thermal
+          insulation, soundproofing, and reduced weight compared to traditional bricks. This makes them the perfect
+          choice for residential, commercial, and industrial projects.
+        </p>
+        <h3>We are committed to:</h3>
+        <ul>
+          <li>Delivering consistent quality in every product</li>
+          <li>Offering affordable pricing without compromising durability</li>
+          <li>Supporting eco-friendly construction practices</li>
+          <li>Providing on-time supply for hassle-free project execution</li>
+        </ul>
+        <p>
+          With years of experience and a trusted reputation in the industry, we aim to build long-lasting relationships
+          with our customers while contributing to a stronger and greener tomorrow.
+        </p>
+      </div>
+      <div class="about-img">
+        <img src="/Images/IMG_8918.jpg" alt="About Image">
+      </div>
+    </div>
+  </section>
+
+  <!-- Our products -->
+  <section class="products">
+    <h2>Our Products</h2>
+    <div class="card-container">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../Images/4inch brick.png" alt="Brick Size 1">
+            <button class="flip-btn">⟳</button>
+          </div>
+          <div class="card-back">
+            <h3>4-inch Solid Brick</h3>
+            <p>Perfect for small constructions. Size: 16″ X 4″ X 8″ (1 1/4 feet).</p>
+            <a href="#" class="btn">Enquire</a>
+            <button class="flip-btn">⟳</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../Images/6-inch.jpeg" alt="Brick Size 2">
+            <button class="flip-btn">⟳</button>
+          </div>
+          <div class="card-back">
+            <h3>6-inch Solid Brick</h3>
+            <p>Strong and durable. Size: 16″ X 6″ X 8″ (1 1/4 feet).</p>
+            <a href="#" class="btn">Enquire</a>
+            <button class="flip-btn">⟳</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="../Images/6-inch-1feet.jpeg" alt="Brick Size 3">
+            <button class="flip-btn">⟳</button>
+          </div>
+          <div class="card-back">
+            <h3>6-inch 1 feet Solid Brick</h3>
+            <p>Best for big projects. Size: 16″ X 6″ X 8″ (1 feet).</p>
+            <a href="#" class="btn">Enquire</a>
+            <button class="flip-btn">⟳</button>
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Flip effect on button click
+        document.querySelectorAll(".flip-btn").forEach(btn => {
+          btn.addEventListener("click", function () {
+            this.closest(".card").classList.toggle("is-flipped");
+          });
+        });
+      </script>
+    </div>
+  </section>
 </body>
 
 </html>
