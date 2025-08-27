@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ponkulanthai Hollow Bricks</title>
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
 
 <body>
@@ -17,70 +19,25 @@
       <div class="header-nav">
         <nav>
           <ul>
-            <li><a>About</a></li>
-            <li><a>Products</a></li>
-            <li>Gallery</li>
-            <li>Contact Us</li>
+            <li><a href="#about">About</a></li>
+            <li><a href="./pages/products/products.html">Products</a></li>
+            <li><a href="#gallery-wrap">Gallery</a></li>
+            <li><a href="#contact">Contact Us</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </div>
+  <marquee><b>Delivery locations :</b> Theni | P.C.patty | Allinagaram | Veerapandi | Bodi | Andipatti | Near by
+    locations too | <b>Contact :</b> 9944357401</marquee>
+  <!-- Carousel -->
   <div class="carousel">
     <div class="slides">
-      <!-- Radio buttons -->
-      <input type="radio" name="radio-btn" id="radio1" checked>
-      <input type="radio" name="radio-btn" id="radio2">
-      <input type="radio" name="radio-btn" id="radio3">
-      <input type="radio" name="radio-btn" id="radio4">
-
-      <!-- Slide 1 -->
-      <div class="slide first">
-        <img src="../Images/IMG_8923.jpg" alt="Slide 1">
-        <div class="content">
-          <h2>🎉 Special Offer!</h2>
-          <p>Buy 2 Hollow Bricks, Get 1 Free</p>
-          <button>Shop Now</button>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="slide">
-        <img src="../Images/IMG_8918.jpg" alt="Slide 2">
-        <div class="content">
-          <h2>🔥 Limited Time</h2>
-          <p>20% Off on Bulk Orders</p>
-          <button>Order Today</button>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="slide">
-        <img src="../Images/slide-3.jpg" alt="Slide 3">
-        <div class="content">
-          <h2>🚚 Free Delivery</h2>
-          <p>On Orders Above 500 Bricks</p>
-          <button>Grab Deal</button>
-        </div>
-      </div>
-
-      <!-- Slide 4 -->
-      <div class="slide">
-        <img src="../Images/slide-4.jpg" alt="Slide 4">
-        <div class="content">
-          <h2>🏗️ New Arrivals</h2>
-          <p>Check out our latest strong bricks</p>
-          <button>Explore</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Manual navigation -->
-    <div class="navigation-manual">
-      <label for="radio1" class="manual-btn"></label>
-      <label for="radio2" class="manual-btn"></label>
-      <label for="radio3" class="manual-btn"></label>
-      <label for="radio4" class="manual-btn"></label>
+      <div class="slide"><img src="../Images/IMG_8923.jpg" alt="Slide 1"></div>
+      <div class="slide"><img src="../Images/IMG_8918.jpg" alt="Slide 2"></div>
+      <div class="slide"><img src="../Images/slide-5.jpg" alt="Slide 3"></div>
+      <div class="slide"><img src="../Images/slide-7.jpg" alt="Slide 4"></div>
+      <div class="slide"><img src="../Images/IMG_8923.jpg" alt="Slide 1"></div>
     </div>
   </div>
 
@@ -90,7 +47,8 @@
     <div class="about-container">
       <div class="about-text">
         <p>
-          At Ponkulanthai Hollow Bricks Industry, we specialize in manufacturing high-quality hollow bricks that are
+          At <b>Ponkulanthai Hollow Bricks</b> Industry, we specialize in manufacturing high-quality hollow bricks that
+          are
           durable, eco-friendly, and cost-effective. With a focus on innovation and sustainability, we provide
           construction solutions that meet modern building standards while ensuring strength and reliability.
         </p>
@@ -115,11 +73,26 @@
         <img src="/Images/IMG_8918.jpg" alt="About Image">
       </div>
     </div>
+    <script>
+      const aboutImg = document.querySelector(".about-img");
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            aboutImg.classList.add("show");
+          }
+        });
+      });
+
+      observer.observe(aboutImg);
+    </script>
+
   </section>
 
   <!-- Our products -->
-  <section class="products">
+  <section id="products" class="products">
     <h2>Our Products</h2>
+    <p class="subtitle">Trusted by builders, loved by homeowners | Solid foundations start here.</p>
     <div class="card-container">
       <!-- Card 1 -->
       <div class="card">
@@ -131,7 +104,7 @@
           <div class="card-back">
             <h3>4-inch Solid Brick</h3>
             <p>Perfect for small constructions. Size: 16″ X 4″ X 8″ (1 1/4 feet).</p>
-            <a href="#" class="btn">Enquire</a>
+            <a href="./pages/products/products.html" class="btn">Enquire</a>
             <button class="flip-btn">⟳</button>
           </div>
         </div>
@@ -147,7 +120,7 @@
           <div class="card-back">
             <h3>6-inch Solid Brick</h3>
             <p>Strong and durable. Size: 16″ X 6″ X 8″ (1 1/4 feet).</p>
-            <a href="#" class="btn">Enquire</a>
+            <a href="./pages/products/products.html" class="btn">Enquire</a>
             <button class="flip-btn">⟳</button>
           </div>
         </div>
@@ -163,12 +136,11 @@
           <div class="card-back">
             <h3>6-inch 1 feet Solid Brick</h3>
             <p>Best for big projects. Size: 16″ X 6″ X 8″ (1 feet).</p>
-            <a href="#" class="btn">Enquire</a>
+            <a href="./pages/products/products.html" class="btn">Enquire</a>
             <button class="flip-btn">⟳</button>
           </div>
         </div>
       </div>
-
       <script>
         // Flip effect on button click
         document.querySelectorAll(".flip-btn").forEach(btn => {
@@ -179,6 +151,114 @@
       </script>
     </div>
   </section>
+  <!-- Gallery section -->
+  <section id="gallery-wrap" class="gallery-wrap">
+    <h2 class="title">Our Gallery</h2>
+    <p class="subtitle" style="color: black; margin-right: 150px;">Take a look at some of our projects and high-quality
+      hollow bricks in action.</p>
+
+    <div class="gallery-container">
+      <div class="carousel-gallery">
+        <ul class="gallery">
+          <li class="card" style="--timer: 1"><img src="/Images/slide-1.jpg" alt=""></li>
+          <li class="card" style="--timer: 2"><img src="/Images/slide-2.jpg" alt=""></li>
+          <li class="card" style="--timer: 3"><img src="/Images/slide-3.jpg" alt=""></li>
+          <li class="card" style="--timer: 4"><img src="/Images/slide-4.jpg" alt=""></li>
+          <li class="card" style="--timer: 5"><img src="/Images/slide-5.jpg" alt=""></li>
+          <li class="card" style="--timer: 6"><img src="/Images/slide-8.jpg" alt=""></li>
+          <li class="card" style="--timer: 7"><img src="/Images/slide-7.jpg" alt=""></li>
+          <li class="card" style="--timer: 8"><img src="/Images/slide-8.jpg" alt=""></li>
+          <li class="card" style="--timer: 9"><img src="/Images/slide-2.jpg" alt=""></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- why choose us section -->
+  <section id="why-wrap" class="why-wrap">
+    <h2 class="title">Why Choose Us?</h2>
+    <p class="subtitle">Builders, contractors and homeowners trust our hollow bricks for strength, savings and
+      sustainability.</p>
+
+    <div class="why-grid">
+      <!-- Card 1 -->
+      <article class="art-card">
+        <div class="icon"><i class="fas fa-shield-alt"></i></div>
+        <h3>High Strength</h3>
+        <p>Engineered for durability and long-lasting foundations.</p>
+      </article>
+      <!-- Card 2 -->
+      <article class="art-card">
+        <div class="icon"><i class="fas fa-leaf"></i></div>
+        <h3>Eco-Friendly</h3>
+        <p>Manufactured with sustainable and energy-efficient processes.</p>
+      </article>
+      <!-- Card 3 -->
+      <article class="art-card">
+        <div class="icon"><i class="fas fa-clock"></i></div>
+        <h3>On-Time Delivery</h3>
+        <p>We ensure your projects never face unnecessary delays.</p>
+      </article>
+      <!-- Card 4 -->
+      <article class="art-card">
+        <div class="icon"><i class="fas fa-coins"></i></div>
+        <h3>Cost-Effective</h3>
+        <p>Reduces plaster, mortar and cooling costs for projects.</p>
+      </article>
+      <!-- Card 5 -->
+      <article class="art-card">
+        <div class="icon"><i class="fas fa-ruler-combined"></i></div>
+        <h3>Custom Sizes</h3>
+        <p>Flexible production for standard and project-specific needs.</p>
+      </article>
+      <!-- Card 6 -->
+      <article class="art-card">
+        <div class="icon"><i class="fas fa-handshake"></i></div>
+        <h3>Trusted Support</h3>
+        <p>Our expert team assists you from order to delivery.</p>
+      </article>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Left: Company Info -->
+      <div class="footer-col">
+        <h3>Ponkulanthai Hollow Bricks</h3>
+        <p><strong>Address:</strong> Main Road, near Rajeswari modern Rice Mill, Boothipuram, Theni, Tamil Nadu 625531.
+        </p>
+        <p><strong>Phone:</strong> +91-9597114210</p>
+        <p><strong>Email:</strong> PonkulanthaiHB@gmail.com</p>
+        <p><strong>Working Hours:</strong> Mon – Sat (9:00 AM – 6:00 PM)</p>
+      </div>
+
+      <!-- Middle: Quick Links -->
+      <div class="footer-col">
+        <h3>Quick links</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#gallery-wrap">Gallery</a></li>
+          <li><a href="#why-wrap">Why Choose Us</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Right: Location -->
+      <div class="footer-col">
+        <h3>Location</h3>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d108869.85957914244!2d77.4513329!3d10.005475299999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0713de68ba8a15%3A0x7de078a93b047f47!2sPonkulanthai%20Hollow%20Bricks!5e1!3m2!1sen!2sin!4v1755868208102!5m2!1sen!2sin"
+          width="350" height="250" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Bottom copyright -->
+    <div class="footer-bottom">
+      <p>© 2011 Ponkulanthai Hollow Bricks Industry. All Rights Reserved.</p>
+    </div>
+  </footer>
+
 </body>
 
 </html>
