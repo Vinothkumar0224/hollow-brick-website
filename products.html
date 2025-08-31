@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Ponkulanthai Hollow Bricks</title>
+    <link rel="icon" type="image/png" href="/Images/PHB.png">
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container-head">
+        <div class="header">
+            <div class="head">
+                <img src="/Images/logo.png" alt="logo" class="logo">
+                <span class="brand">
+                    <span class="short"><img src="/Images/PHB.png" height="60px"></span>
+                    <span class="full"><img src="/Images/PONKULANTHAI HOLLOW BRICK.png" height="35px"></span>
+                </span>
+            </div>
+            <div class="header-nav">
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">About</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="/index.html">Gallery</a></li>
+                        <li><a href="/index.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </div>
+    <nav class="breadcrumb">
+        <a href="/index.html">Home</a>
+        <span>›</span>
+        <a href="/products.html"><span>Products</span></a>
+    </nav>
+    <!-- Background Video -->
+    <video autoplay muted loop id="bg-video">
+        <source src="/Images/Cement blocks wall construction for compound (online-video-cutter.com).mp4"
+            type="video/mp4">
+    </video>
+    <div class="overlay">
+        <div class="title">
+            <h2>Brick Calculator</h2>
+            <p>Estimate the number of bricks & cost for your building project.</p>
+        </div>
+        <!-- Brick GIFs Row -->
+        <div class="brick-row">
+            <div class="brick-card">
+                <h4>4" Solid Brick</h4>
+                <img src="/Images/4 inches.gif" alt="Small Brick">
+            </div>
+            <div class="brick-card">
+                <h4>6" Solid Brick</h4>
+                <img src="/Images/6 inch.gif" alt="Medium Brick">
+            </div>
+            <div class="brick-card">
+                <h4>6"-1 feet Solid Brick</h4>
+                <img src="/Images/6 inch 1feet.gif" alt="Large Brick">
+            </div>
+        </div>
+
+        <!-- Main Section: Form + Quotation -->
+        <div class="main-section">
+            <!-- Input Form -->
+            <div class="form-box">
+                <h3>Enter Your Building Details</h3>
+                <label>Room Length (ft):</label>
+                <input type="number" id="roomLength">
+
+                <label>Room Width (ft):</label>
+                <input type="number" id="roomWidth">
+
+                <label>Room Height (ft):</label>
+                <input type="number" id="roomHeight">
+
+                <label>Select Brick Size:</label>
+                <select id="brickSelect">
+                    <option value="">-- Select --</option>
+                    <option value="small">4" Brick</option>
+                    <option value="medium">6" Brick</option>
+                    <option value="large">6"-1feet Brick</option>
+                </select>
+
+                <button onclick="calculateBricks()">Calculate Bricks</button>
+            </div>
+
+            <!-- Quotation Box -->
+            <div class="quote-box">
+                <h3>Quotation</h3>
+                <p id="quoteResult">Fill in the details to get your quotation.</p>
+            </div>
+        </div>
+        <!-- Estimation Notes & Contact Section -->
+        <section class="notes-contact">
+            <h3>Estimation Notes & Contact</h3>
+
+            <ul>
+                <li>This calculator provides an <strong>approximate estimation</strong>. Actual brick requirements may
+                    vary
+                    depending on mortar thickness, plastering, and structural design.</li>
+                <li><strong>Transport charges</strong> are additional and vary based on location & distance.</li>
+                <li>For precise estimation and bulk order discounts, please get in touch with our team.</li>
+            </ul>
+
+            <button onclick="location.href='#contact'">
+                <div class="icon"><i class="fa-solid fa-phone-volume"></i></div> Contact Us
+            </button>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq">
+                <button class="faq-question">
+                    <span>Are hollow bricks strong enough for building houses?</span>
+                    <span class="icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, our hollow bricks are designed to be strong and durable. They are suitable for both
+                        residential and commercial construction.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">
+                    <span>Do hollow bricks help in reducing heat inside the building?</span>
+                    <span class="icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, hollow bricks act as natural insulators, keeping your home cooler in summer and warmer in
+                        winter.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">
+                    <span>Can I use hollow bricks for load-bearing walls?</span>
+                    <span class="icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, depending on the design and size, our bricks can be used for both load-bearing and partition
+                        walls.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">
+                    <span>Are hollow bricks cost-effective compared to traditional bricks?</span>
+                    <span class="icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Definitely! They require less mortar, reduce construction time, and provide long-term savings
+                        through energy efficiency.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <button class="faq-question">
+                    <span>Do you provide transport and unloading services?</span>
+                    <span class="icon"><i class="fas fa-plus"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, we provide loading/unloading service charges in the quote. Transport charges vary based on
+                        location & distance.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact" class="footer">
+        <div class="footer-container">
+            <!-- Left: Company Info -->
+            <div class="footer-col">
+                <!-- <h3>Ponkulanthai Hollow Bricks</h3> -->
+                <img src="/Images/PHB.png" height="60px">
+                <p><strong>Address:</strong> Main Road, near Rajeswari modern Rice Mill, Boothipuram, Theni, Tamil
+                    Nadu
+                    625531.
+                </p>
+                <p><strong>Phone:</strong> +91-9597114210</p>
+                <p><strong>Email:</strong> PonkulanthaiHB@gmail.com</p>
+                <p><strong>Working Hours:</strong> Mon – Sat (9:00 AM – 6:00 PM)</p>
+            </div>
+
+            <!-- Middle: Quick Links -->
+            <div class="footer-col">
+                <h3>Quick links</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#gallery-wrap">Gallery</a></li>
+                    <li><a href="#why-wrap">Why Choose Us</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Right: Location -->
+            <div class="footer-col">
+                <h3>Location</h3>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d108869.85957914244!2d77.4513329!3d10.005475299999999!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0713de68ba8a15%3A0x7de078a93b047f47!2sPonkulanthai%20Hollow%20Bricks!5e1!3m2!1sen!2sin!4v1755868208102!5m2!1sen!2sin"
+                    width="350" height="250" style="border:0; border-radius:8px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Bottom copyright -->
+        <div class="footer-bottom">
+            <p>© 2011 Ponkulanthai Hollow Bricks Industry. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Brick sizes and prices
+        const brickData = {
+            small: { L: 15, W: 4, H: 8, price: 35 },
+            medium: { L: 15, W: 6, H: 8, price: 45 },
+            large: { L: 12, W: 6, H: 8, price: 40 }
+        };
+
+        function calculateBricks() {
+            let L = document.getElementById("roomLength").value * 12;
+            let W = document.getElementById("roomWidth").value * 12;
+            let H = document.getElementById("roomHeight").value * 12;
+            let selectedBrick = document.getElementById("brickSelect").value;
+
+            if (!L || !W || !H || !selectedBrick) {
+                alert("Please enter all details.");
+                return;
+            }
+
+            let b = brickData[selectedBrick];
+            let perimeter = 2 * (L + W);
+            let wallArea = perimeter * H;
+            let wallThickness = b.W;
+
+            let wallVolume = wallArea * wallThickness;
+            let brickVolume = b.L * b.W * b.H;
+
+            let totalBricks = Math.ceil(wallVolume / brickVolume);
+            let brickCost = totalBricks * b.price;
+            let loadUnload = totalBricks * 2;
+            let grandTotal = brickCost + loadUnload;
+
+            document.getElementById("quoteResult").innerHTML = `
+  <i class="fa-solid fa-cube"></i> Total Bricks Required: <span class="highlight">${totalBricks}</span><br><br>
+  <i class="fa-solid fa-indian-rupee-sign"></i> Brick Cost: ₹ ${brickCost}<br><br>
+  <i class="fa-solid fa-truck-loading"></i> Loading & Unloading: ₹ ${loadUnload}<br><br>
+  <i class="fa-solid fa-truck"></i> Transport Charges: <em>Varies based on location & distance</em><br><br>
+  <strong class="highlight"><i class="fa-solid fa-calculator"></i> Estimated Total : ₹ ${grandTotal} + Transport</strong>
+`;
+        }
+        // ✅ FAQ toggle script (runs as soon as page loads)
+        const faqButtons = document.querySelectorAll(".faq-question");
+
+        faqButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector(".icon");
+
+                // Toggle current FAQ
+                answer.classList.toggle("show");
+                button.classList.toggle("active");
+
+                // Close others
+                faqButtons.forEach(btn => {
+                    if (btn !== button) {
+                        btn.classList.remove("active");
+                        btn.nextElementSibling.classList.remove("show");
+                    }
+                });
+
+                // Change Font Awesome icon
+                if (button.classList.contains("active")) {
+                    icon.innerHTML = '<i class="fas fa-minus"></i>';
+                } else {
+                    icon.innerHTML = '<i class="fas fa-plus"></i>';
+                }
+
+            });
+        });
+        // Toggle mobile nav
+        function toggleMenu() {
+            document.querySelector(".header-nav").classList.toggle("active");
+        }
+    </script>
+
+
+</body>
+
+</html>

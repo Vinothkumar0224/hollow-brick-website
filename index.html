@@ -5,28 +5,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ponkulanthai Hollow Bricks</title>
+  <link rel="icon" type="image/png" href="/Images/PHB.png">
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
 </head>
 
 <body>
   <div class="container">
     <div class="header">
       <div class="head">
-        <h3>Ponkulanthai Hollow Bricks</h3>
+        <img src="/Images/logo.png" alt="logo" class="logo">
+        <span class="brand">
+          <span class="short"><img src="/Images/PHB.png" height="60px"></span>
+          <span class="full"><img src="/Images/PONKULANTHAI HOLLOW BRICK.png" height="35px"></span>
+        </span>
       </div>
       <div class="header-nav">
         <nav>
           <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="Pages/products.html">Products</a></li>
+            <li><a href="/products.html">Products</a></li>
             <li><a href="#gallery-wrap">Gallery</a></li>
             <li><a href="#contact">Contact Us</a></li>
           </ul>
         </nav>
       </div>
+      <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+      </div>
     </div>
+    <script>
+    // Toggle mobile nav
+        function toggleMenu() {
+            document.querySelector(".header-nav").classList.toggle("active");
+        }
+  </script>
   </div>
   <marquee><b>Delivery locations :</b> Theni | P.C.patty | Allinagaram | Veerapandi | Bodi | Andipatti | Near by
     locations too | <b>Contact :</b> 9944357401</marquee>
@@ -221,8 +234,9 @@
   <footer class="footer">
     <div class="footer-container">
       <!-- Left: Company Info -->
-      <div class="footer-col">
-        <h3>Ponkulanthai Hollow Bricks</h3>
+      <div id="contact" class="footer-col">
+        <!-- <h3>Ponkulanthai Hollow Bricks</h3> -->
+        <img src="/Images/PHB.png" height="60px">
         <p><strong>Address:</strong> Main Road, near Rajeswari modern Rice Mill, Boothipuram, Theni, Tamil Nadu 625531.
         </p>
         <p><strong>Phone:</strong> +91-9597114210</p>
@@ -258,7 +272,7 @@
       <p>© 2011 Ponkulanthai Hollow Bricks Industry. All Rights Reserved.</p>
     </div>
   </footer>
-
+  
 </body>
 
 </html>
