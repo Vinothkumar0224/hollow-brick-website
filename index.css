@@ -8,7 +8,7 @@ body {
   left: 0;
   width: 100%;
   height: 12%;
-  background: url('/Images/IMG_8918.jpg');
+  background: url('/images/img-8918.jpg');
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.1) !important;
   display: flex;
