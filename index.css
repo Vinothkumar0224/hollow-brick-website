@@ -8,16 +8,36 @@ body {
   left: 0;
   width: 100%;
   height: 12%;
+<<<<<<< HEAD
+  background:url('/Images/IMG_8918.jpg'); 
+  background-blend-mode: overlay;
+  /* background-color: rgba(0, 0, 0, 0.22) !important; */
+  /* backdrop-filter: blur(6px); */
+  /* box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); */
+=======
   background: url('/images/img-8918.jpg');
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.1) !important;
+>>>>>>> cc14e40520f1b457b695e30937a0bcd6bfe81cc6
   display: flex;
-  justify-content: space-evenly;
+  justify-content:space-evenly;
   align-items: center;
   margin: auto;
   z-index: 1000;
 }
 
+<<<<<<< HEAD
+.logo{
+  height: 50px;
+  width: auto;
+  vertical-align: middle;
+}
+
+.head {
+  font-size: 30px;
+  font-weight: bold;
+  color: gold;
+=======
 .logo {
   height: 50px;
   width: auto;
@@ -27,7 +47,28 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+>>>>>>> cc14e40520f1b457b695e30937a0bcd6bfe81cc6
   cursor: pointer;
+  position: relative;
+  width: 450px;
+  left: 0;
+}
+
+.head .full {
+  display: none;
+  margin-left: 8px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.head:hover .short {
+  display: none;
+}
+
+.head:hover .full {
+  font-size: 24px;
+  display: inline;
+  opacity: 1;
+  font-family:'Aclonica';
 }
 
 .brand {
@@ -77,7 +118,7 @@ ul {
 }
 
 ul li a {
-  color: ivory;
+  color: rgb(7, 7, 6);
   font-weight: bold;
   text-decoration: none;
   font-size: large;
@@ -97,6 +138,7 @@ ul li a:hover {
   position: relative;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
   margin: auto;
+  margin-top: 78px;
 }
 
 .slides {
@@ -540,6 +582,8 @@ h2 {
   margin-top: 30px;
   font-size: 13px;
   color: #555;
+<<<<<<< HEAD
+=======
 }
 
 /* Default: hide hamburger */
@@ -768,4 +812,5 @@ h2 {
   .footer {
     padding: 30px 10px;
   }
+>>>>>>> cc14e40520f1b457b695e30937a0bcd6bfe81cc6
 }
