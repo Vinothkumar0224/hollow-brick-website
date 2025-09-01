@@ -8,7 +8,7 @@ body {
   left: 0;
   width: 100%;
   height: 12%;
-  background: url('/images/img-8918.jpg');
+  background: url('/Images/img-8918.jpg');
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.1) !important;
   display: flex;
@@ -97,7 +97,7 @@ ul {
 }
 
 ul li a {
-  color: rgb(7, 7, 6);
+  color: ivory;
   font-weight: bold;
   text-decoration: none;
   font-size: large;
@@ -106,6 +106,10 @@ ul li a {
 ul li a:hover {
   color: goldenrod;
   text-decoration: underline;
+}
+
+marquee {
+  margin-top: 78px;
 }
 
 /* Carousel section */
@@ -117,7 +121,6 @@ ul li a:hover {
   position: relative;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
   margin: auto;
-  margin-top: 78px;
 }
 
 .slides {
@@ -229,7 +232,7 @@ h2 {
 .products {
   text-align: center;
   padding: 50px 20px;
-  background-image: url('/images/img-8926.jpg');
+  background-image: url('/Images/img-8926.jpg');
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.62) !important;
   background-repeat: no-repeat;
@@ -429,7 +432,7 @@ h2 {
 .why-wrap {
   padding: 70px 20px;
   text-align: center;
-  background-image: url('/images/slide-7.jpg');
+  background-image: url('/Images/slide-7.jpg');
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.62) !important;
   background-repeat: no-repeat;
