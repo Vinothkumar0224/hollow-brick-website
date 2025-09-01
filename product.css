@@ -578,6 +578,17 @@ h4 {
         max-width: auto;
     }
 
+    .form-box button{
+        width: auto;
+        margin: auto;
+    }
+
+    .form-box button:hover{
+        background: #3654ff;
+        color: #fff;
+        cursor: pointer;
+    }
+
     .notes-contact {
         /* margin-left: -30px; */
         width: auto;
