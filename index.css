@@ -12,7 +12,7 @@ body {
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.1) !important;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   align-items: center;
   margin: auto;
   z-index: 1000;
@@ -47,7 +47,7 @@ body {
   font-size: 24px;
   display: inline;
   opacity: 1;
-  font-family:'Aclonica';
+  font-family: 'Aclonica';
 }
 
 .brand {
@@ -104,7 +104,7 @@ ul li a {
 }
 
 .nav ul li a.active {
-  color: goldenrod; 
+  color: goldenrod;
   font-weight: bold;
 }
 
@@ -149,19 +149,29 @@ marquee {
 
 /* Auto sliding animation */
 @keyframes slideAnim {
-  0% , 20%{
+
+  0%,
+  20% {
     transform: translateX(0%);
   }
-  25%, 40%{
+
+  25%,
+  40% {
     transform: translateX(-100%);
   }
-  45%, 60% {
+
+  45%,
+  60% {
     transform: translateX(-200%);
   }
-  65%, 80% {
+
+  65%,
+  80% {
     transform: translateX(-300%);
   }
-  85%, 100% {
+
+  85%,
+  100% {
     transform: translateX(-400%);
   }
 }
@@ -453,10 +463,10 @@ h2 {
 }
 
 .subtitle {
-  max-width: 700px;
-  margin: 0 auto 40px;
+  margin: 0 auto 30px;
   color: #fff;
   font-size: 16px;
+  text-align: center;
 }
 
 .why-grid {
@@ -573,10 +583,10 @@ h2 {
 
 /* Default: hide hamburger */
 .hamburger {
-    display: none;
-    font-size: 24px;
-    color: ivory;
-    cursor: pointer;
+  display: none;
+  font-size: 24px;
+  color: ivory;
+  cursor: pointer;
 }
 
 /* responsive */
@@ -596,6 +606,10 @@ h2 {
   .carousel-gallery .gallery .card {
     width: 160px;
   }
+
+  .footer iframe{
+    width: auto;
+  }
 }
 
 /* Tablets (max-width: 992px) */
@@ -604,12 +618,9 @@ h2 {
     flex-direction: row;
     padding: 2px;
     text-align: center;
+    width: auto;
   }
 
-  .logo {
-    height: 20px;
-
-  }
 
   ul {
     flex-direction: row;
@@ -620,17 +631,18 @@ h2 {
 
   .about-container {
     flex-direction: column;
-    text-align: center;
+    /* text-align: center; */
   }
 
   .about-img img {
     max-width: 80%;
-    margin: 0 auto;
+    margin-left: 2rem;
   }
 
   .card-container {
     flex-wrap: wrap;
     justify-content: center;
+    margin-right: 40px;
     gap: 20px;
   }
 
@@ -647,8 +659,10 @@ h2 {
   }
 
   .art-card {
-    height: auto;
+    height: 150px;
+    width: 250px;
     padding: 20px;
+    margin: auto;
   }
 
   .footer-container {
@@ -703,70 +717,67 @@ h2 {
 
 @media (min-width: 320px) and (max-width: 600px) {
   .head .full {
-        display: none;
-    }
-
-    .head .short {
-        display: block;
-    }
-
-    .head .logo{
-      width: 50px;
-      height: 50px;
-    }
-
-    .head:hover .brand > .short {
-    display: none;
-    pointer-events: none;
+    display: none !important;
   }
 
-    .header{
-      display: flex;
-      justify-content:space-between;
-      max-width: 100%;
-    }
+  .head .short {
+    display: block !important;
+  }
 
-    .header-nav {
-        display: none;
-        position: absolute;
-        top: 65px;
-        right: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.6);
-        padding: 15px;
-        border-radius: 8px;
-    }
+  .head:hover .brand>.short {
+    opacity: 1;
+    pointer-events: none !important;
+  }
 
-    .header-nav.active {
-        display: block;
-    }
+  .header {
+    max-width: 100%;
+  }
 
-    .header-nav:hover {
-        color: #f59e0b;
-        text-decoration: underline;
-    }
+  .header-nav {
+    display: none;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 15px;
+    /* border-radius: 8px; */
+  }
 
-    .header-nav ul {
-        flex-direction: column;
-        gap: 20px;
-    }
+  .header-nav.active {
+    display: block;
+  }
 
-    .header-nav ul li a {
-        font-size: 16px;
-        color: white;
-    }
+  .header-nav ul li a:hover {
+    color: #f59e0b;
+    text-decoration: underline;
+  }
 
-    .hamburger {
-        display: block;
-        margin-right: 20px;
-    }
+  .header-nav ul {
+    margin: auto;
+    gap: 25px;
+  }
 
-    marquee{
-      margin-top:90px;
-    }
+  .header-nav ul li a {
+    font-size: 16px;
+    color: white;
+  }
+
+  .hamburger {
+    display: block;
+    margin-right: 20px;
+  }
+
+  marquee {
+    margin-top: 70px;
+  }
 
   .carousel {
     height: 400px;
+  }
+
+  .carousel-gallery{
+    flex-direction: column;
   }
 
   .carousel-gallery .gallery .card {
@@ -795,15 +806,15 @@ h2 {
   }
 
   :root {
-  --num: 4;
-  --wd: 150;
-  --gap: 15;
-}
+    --num: 4;
+    --wd: 150;
+    --gap: 15;
+  }
 
-.subtitle{
-  width: 100%;
-  height: 100%;
-}
+  .subtitle {
+    width: 100%;
+    height: 100%;
+  }
 
   .footer {
     padding: 30px 10px;
