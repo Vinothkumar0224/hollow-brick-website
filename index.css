@@ -392,7 +392,7 @@ h2 {
   transform-style: preserve-3d;
   left: 100%;
   animation: slide 9s linear infinite,
-    scaleEffect 9s ease-in-out infinite;
+  scaleEffect 9s ease-in-out infinite;
   animation-delay: calc(9s * ((var(--timer) - 1) / var(--num) - 1));
   transition: transform 0.25s ease-in-out;
 }
