@@ -50,7 +50,7 @@ ul li a:hover {
 
 /* Breadcrumb */
 .breadcrumb {
-    width: 100%;
+    /* width: 100%; */
     font-size: 16px;
     color: #fff;
     text-align: left;
