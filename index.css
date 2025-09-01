@@ -8,7 +8,7 @@ body {
   left: 0;
   width: 100%;
   height: 12%;
-  background: url('/Images/img-8918.jpg');
+  background: url('Images/img-8918.jpg');
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.1) !important;
   display: flex;
@@ -101,6 +101,11 @@ ul li a {
   font-weight: bold;
   text-decoration: none;
   font-size: large;
+}
+
+.nav ul li a.active {
+  color: goldenrod; 
+  font-weight: bold;
 }
 
 ul li a:hover {
@@ -232,7 +237,7 @@ h2 {
 .products {
   text-align: center;
   padding: 50px 20px;
-  background-image: url('/Images/img-8926.jpg');
+  background-image: url('Images/img-8926.jpg');
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.62) !important;
   background-repeat: no-repeat;
@@ -432,7 +437,7 @@ h2 {
 .why-wrap {
   padding: 70px 20px;
   text-align: center;
-  background-image: url('/Images/slide-7.jpg');
+  background-image: url('Images/slide-7.jpg');
   background-blend-mode: overlay;
   background-color: rgba(0, 0, 0, 0.62) !important;
   background-repeat: no-repeat;
@@ -727,7 +732,7 @@ h2 {
         top: 65px;
         right: 0;
         width: 100%;
-        background: rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0.6);
         padding: 15px;
         border-radius: 8px;
     }
@@ -788,6 +793,17 @@ h2 {
   .art-card p {
     font-size: 13px;
   }
+
+  :root {
+  --num: 4;
+  --wd: 150;
+  --gap: 15;
+}
+
+.subtitle{
+  width: 100%;
+  height: 100%;
+}
 
   .footer {
     padding: 30px 10px;
