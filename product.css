@@ -555,6 +555,11 @@ h4 {
         margin-right: 20px;
     }
 
+    #bg-video{
+        background-position: 50%;
+        background-size: cover;
+    }
+    
     .breadcrumb{
         position: relative;
         margin-top: 75px;

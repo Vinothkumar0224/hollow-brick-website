@@ -646,6 +646,11 @@ h2 {
     gap: 20px;
   }
 
+  .products{
+    background-size: cover;
+    background-position: 50%;
+  }
+
   .products h2 {
     font-size: 26px;
   }
@@ -685,6 +690,11 @@ h2 {
 
   .carousel-gallery .gallery .card {
     width: 120px;
+  }
+
+  .products{
+    background-size: cover;
+    background-position: 50%;
   }
 
   .products h2 {
@@ -769,7 +779,7 @@ h2 {
   }
 
   marquee {
-    margin-top: 110px;
+    margin-top: 90px;
   }
 
   .carousel {
