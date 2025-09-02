@@ -410,7 +410,7 @@ h2 {
   transform-style: preserve-3d;
   left: 100%;
   animation: slide 9s linear infinite,
-  scaleEffect 9s ease-in-out infinite;
+    scaleEffect 9s ease-in-out infinite;
   animation-delay: calc(9s * ((var(--timer) - 1) / var(--num) - 1));
   transition: transform 0.25s ease-in-out;
 }
@@ -607,7 +607,7 @@ h2 {
     width: 160px;
   }
 
-  .footer iframe{
+  .footer iframe {
     width: auto;
   }
 }
@@ -646,7 +646,7 @@ h2 {
     gap: 20px;
   }
 
-  .products{
+  .products {
     background-size: cover;
     background-position: 50%;
   }
@@ -692,7 +692,7 @@ h2 {
     width: 120px;
   }
 
-  .products{
+  .products {
     background-size: cover;
     background-position: 50%;
   }
@@ -748,6 +748,7 @@ h2 {
     position: absolute;
     top: 66px;
     /* left: 0; */
+    right: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.9);
     padding: 15px;
@@ -786,7 +787,7 @@ h2 {
     height: 400px;
   }
 
-  .carousel-gallery{
+  .carousel-gallery {
     flex-direction: column;
   }
 
@@ -794,7 +795,7 @@ h2 {
     width: 100px;
   }
 
-  .products{
+  .products {
     background-size: cover;
   }
 

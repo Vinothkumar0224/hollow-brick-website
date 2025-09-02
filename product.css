@@ -515,7 +515,7 @@ h4 {
         display: block;
     }
 
-    .head:hover .brand>.short{
+    .head:hover .brand>.short {
         opacity: 1;
         pointer-events: none !important;
     }
@@ -525,6 +525,7 @@ h4 {
         position: absolute;
         top: 66px;
         /* left: 0; */
+        right: 0;
         width: 100%;
         background: rgba(0, 0, 0, 0.9);
         padding: 15px;
@@ -555,12 +556,12 @@ h4 {
         margin-right: 20px;
     }
 
-    #bg-video{
+    #bg-video {
         background-position: 50%;
         background-size: cover;
     }
 
-    .breadcrumb{
+    .breadcrumb {
         position: relative;
         margin-top: 77px;
         background: rgba(0, 0, 0, 0.7);
@@ -585,12 +586,12 @@ h4 {
         max-width: auto;
     }
 
-    .form-box button{
+    .form-box button {
         width: auto;
         margin: auto;
     }
 
-    .form-box button:hover{
+    .form-box button:hover {
         background: #3654ff;
         color: #fff;
         cursor: pointer;
@@ -601,7 +602,7 @@ h4 {
     }
 
     .notes-contact ul {
-        margin-left:-40px ;
+        margin-left: -40px;
         line-height: 1.1;
     }
 
@@ -609,17 +610,17 @@ h4 {
         margin-right: auto;
     }
 
-    .notes-contact button{
+    .notes-contact button {
         padding: 6px 10px;
         margin-left: 40px;
-        
+
     }
 
     .faq-section {
         max-width: 70%;
     }
 
-    .faq-section h2{
+    .faq-section h2 {
         font-size: 1rem;
     }
 
@@ -646,7 +647,7 @@ h4 {
         border: none;
     }
 
-    .footer-container{
+    .footer-container {
         flex-direction: column;
         text-align: center;
     }
