@@ -114,7 +114,7 @@ ul li a:hover {
 }
 
 marquee {
-  margin-top: 78px;
+  margin-top: 85px;
 }
 
 /* Carousel section */
@@ -769,7 +769,7 @@ h2 {
   }
 
   marquee {
-    margin-top: 70px;
+    margin-top: 130px;
   }
 
   .carousel {
@@ -782,6 +782,10 @@ h2 {
 
   .carousel-gallery .gallery .card {
     width: 100px;
+  }
+
+  .products{
+    background-size: cover;
   }
 
   .products h2 {
