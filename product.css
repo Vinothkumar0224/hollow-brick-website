@@ -19,7 +19,7 @@ body {
 }
 
 .logo {
-    height: 50px;
+    height: 12vh;
     width: auto;
 }
 
@@ -563,7 +563,7 @@ h4 {
 
     .breadcrumb {
         position: relative;
-        margin-top: 77px;
+        margin-top: 5rem;
         background: rgba(0, 0, 0, 0.7);
     }
 
