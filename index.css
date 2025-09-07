@@ -442,7 +442,7 @@ h2 {
   overflow: hidden;
   width: 100%;
   margin: auto;
-  padding: 20px;
+  /* padding: 20px; */
 }
 
 .gallery-track {
@@ -1131,7 +1131,7 @@ h2 {
   }
 
   .gallery-track .g-card {
-    flex: 0 0 97.5% !important;
+    flex: 0 0 91.8% !important;
     /* margin: 0 !important; */
   }
 
