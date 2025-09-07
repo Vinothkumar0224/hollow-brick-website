@@ -504,20 +504,16 @@ h4 {
     body {
         font-size: 0.85rem;
         margin: auto;
-        /* background: rgba(0, 0, 0, 0.4); */
     }
 
-    .head .full {
-        display: none;
+    .header {
+        width: 100vw;
+        height: auto;
+        justify-content: space-between;
     }
 
-    .head .short {
-        display: block;
-    }
-
-    .head:hover .brand>.short {
-        opacity: 1;
-        pointer-events: none !important;
+    .logo {
+        height: 11vh;
     }
 
     .header-nav {

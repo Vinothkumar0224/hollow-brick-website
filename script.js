@@ -21,68 +21,116 @@ document.querySelectorAll(".flip-btn").forEach(btn => {
     });
 });
 
-// Gallery carousel
+// Gallery Carousel
 const galleryTrack = document.querySelector(".gallery-track");
-const galleryCards = [...document.querySelectorAll(".gallery-track .card")];
+const galleryCards = [...document.querySelectorAll(".gallery-track .g-card")];
 const galleryPrev = document.querySelector(".gallery-prev");
 const galleryNext = document.querySelector(".gallery-next");
 const galleryCarousel = document.querySelector(".carousel-gallery");
+
+// Modal Elements
 const modal = document.getElementById("galleryModal");
 const modalImg = document.getElementById("modalImage");
 const closeBtn = document.querySelector(".modal .close");
 
-// Clone first & last slides
-const firstClone = galleryCards[0].cloneNode(true);
-const lastClone = galleryCards.at(-1).cloneNode(true);
-galleryTrack.append(firstClone);
-galleryTrack.prepend(lastClone);
+// Responsive slides per view 
+let slidesToShow = 3; 
+const updateSlidesToShow = () => {
+    const width = window.innerWidth;
+    if (width <= 600) slidesToShow = 1;
+    else if (width <= 992) slidesToShow = 2; 
+    else slidesToShow = 3;
+};
 
-let galleryIndex = 1;
+// Clone slides for infinite loop
+const cloneSlides = () => {
+    // remove old clones
+    galleryTrack.querySelectorAll(".clone").forEach(c => c.remove());
+
+    const totalCards = galleryCards.length;
+    const firstClones = galleryCards.slice(0, slidesToShow).map(card => {
+        const clone = card.cloneNode(true);
+        clone.classList.add("clone");
+        return clone;
+    });
+    const lastClones = galleryCards.slice(-slidesToShow).map(card => {
+        const clone = card.cloneNode(true);
+        clone.classList.add("clone");
+        return clone;
+    });
+
+    firstClones.forEach(clone => galleryTrack.appendChild(clone));
+    lastClones.reverse().forEach(clone => galleryTrack.prepend(clone));
+};
+
+// Calculate card width dynamically
 const cardWidth = () => {
     const style = getComputedStyle(galleryCards[0]);
-    const margin = parseInt(style.marginLeft) + parseInt(style.marginRight);
+    const margin = parseFloat(style.marginLeft) + parseFloat(style.marginRight);
     return galleryCards[0].offsetWidth + margin;
 };
 
+let galleryIndex;
+
+// Set transform
 const setTransform = (transition = true) => {
     galleryTrack.style.transition = transition ? "transform 0.5s ease-in-out" : "none";
     galleryTrack.style.transform = `translateX(-${galleryIndex * cardWidth()}px)`;
 };
-setTransform(false);
 
+// Move slide
 const moveSlide = (dir) => {
     galleryIndex += dir;
     setTransform();
 };
-galleryNext.addEventListener("click", () => moveSlide(1));
-galleryPrev.addEventListener("click", () => moveSlide(-1));
+
+// Infinite loop handling
 galleryTrack.addEventListener("transitionend", () => {
     const total = galleryTrack.children.length;
-    if (galleryIndex === 0) {
-        galleryIndex = total - 2;
+    if (galleryIndex >= total - slidesToShow) {
+        galleryIndex = slidesToShow;
         setTransform(false);
-    }
-    if (galleryIndex === total - 1) {
-        galleryIndex = 1;
+    } else if (galleryIndex < slidesToShow) {
+        galleryIndex = total - slidesToShow * 2;
         setTransform(false);
     }
 });
-let autoSlide = setInterval(() => moveSlide(1), 4000);
+
+// Button controls
+galleryNext.addEventListener("click", () => moveSlide(slidesToShow));
+galleryPrev.addEventListener("click", () => moveSlide(-slidesToShow));
+
+// Auto slide
+let autoSlide = setInterval(() => moveSlide(slidesToShow), 4000);
 galleryCarousel.addEventListener("mouseenter", () => clearInterval(autoSlide));
 galleryCarousel.addEventListener("mouseleave", () => {
-    autoSlide = setInterval(() => moveSlide(1), 4000);
+    autoSlide = setInterval(() => moveSlide(slidesToShow), 4000);
 });
-window.addEventListener("resize", () => setTransform(false));
-document.querySelectorAll(".gallery-track .card img").forEach(img => {
+
+// Initialize gallery
+const initGallery = () => {
+    updateSlidesToShow();
+    cloneSlides();
+    galleryIndex = slidesToShow;
+    setTransform(false);
+};
+window.addEventListener("resize", initGallery);
+initGallery();
+
+// Modal functionality
+galleryCards.forEach(card => {
+    const img = card.querySelector("img");
     img.addEventListener("click", () => {
         modal.style.display = "flex";
         modalImg.src = img.src;
     });
 });
+
 closeBtn.addEventListener("click", () => modal.style.display = "none");
-modal.addEventListener("click", (e) => {
+modal.addEventListener("click", e => {
     if (e.target === modal) modal.style.display = "none";
 });
+
 
 // Testimonials carousel
 const track = document.querySelector(".review-carousel-track");
