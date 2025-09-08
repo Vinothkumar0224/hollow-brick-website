@@ -97,14 +97,14 @@ galleryTrack.addEventListener("transitionend", () => {
 });
 
 // Button controls
-galleryNext.addEventListener("click", () => moveSlide(slidesToShow));
-galleryPrev.addEventListener("click", () => moveSlide(-slidesToShow));
+galleryNext.addEventListener("click", () => moveSlide(1));
+galleryPrev.addEventListener("click", () => moveSlide(-1));
 
 // Auto slide
-let autoSlide = setInterval(() => moveSlide(slidesToShow), 4000);
+let autoSlide = setInterval(() => moveSlide(1), 4000);
 galleryCarousel.addEventListener("mouseenter", () => clearInterval(autoSlide));
 galleryCarousel.addEventListener("mouseleave", () => {
-    autoSlide = setInterval(() => moveSlide(slidesToShow), 4000);
+    autoSlide = setInterval(() => moveSlide(1), 4000);
 });
 
 // Initialize gallery

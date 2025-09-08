@@ -1130,13 +1130,18 @@ h2 {
     height: 100%;
   }
 
+  .gallery-track img{
+    margin-left: -12px !important;
+    /* right:0 !important; */
+  }
+
   .gallery-track .g-card {
-    flex: 0 0 91.8% !important;
-    /* margin: 0 !important; */
+    flex: 0 0 100% !important;
+    margin: 0 !important;
   }
 
   #testimonials h2 {
-    font: 20px;
+    font-size: 20px;
   }
 
   .reviews-summary {
