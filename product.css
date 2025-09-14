@@ -505,6 +505,10 @@ h4 {
   background: #20b954;
 }
 
+.mobile-only {
+    display: none !important; 
+  }
+
 /* Default: hide hamburger */
 .hamburger {
     display: none;
@@ -534,7 +538,7 @@ h4 {
     .header-nav {
         display: none;
         position: absolute;
-        top: 66px;
+        top: 70px;
         right: 0;
         width: 100%;
         background: rgba(0, 0, 0, 0.9);
@@ -666,7 +670,8 @@ h4 {
     .footer-logo {
         margin: auto;
     }
+
     .mobile-only {
-    display: inline-flex; 
+    display: inline-flex !important; 
   }
 }
