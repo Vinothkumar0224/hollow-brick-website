@@ -528,7 +528,7 @@ h4 {
 
     .logo {
         height: 11vh;
-        margin: 3px 10px;
+        /* margin: 3px 10px; */
     }
 
     .header-nav {
@@ -574,7 +574,7 @@ h4 {
 
     .breadcrumb {
         position: relative;
-        margin-top: 5.5rem;
+        margin-top: 5rem;
         background: rgba(0, 0, 0, 0.7);
     }
 

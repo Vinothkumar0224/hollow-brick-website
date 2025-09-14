@@ -1157,7 +1157,7 @@ h2 {
 
   .logo {
     height:11vh;
-    margin: 3px 10px;
+    /* margin: 3px 10px; */
   }
 
   .header-nav {
@@ -1197,7 +1197,7 @@ h2 {
   }
 
   marquee {
-    margin-top: 6.5rem;
+    margin-top: 6rem;
   }
 
   .carousel {
