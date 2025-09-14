@@ -32,13 +32,15 @@ const galleryCarousel = document.querySelector(".carousel-gallery");
 const modal = document.getElementById("galleryModal");
 const modalImg = document.getElementById("modalImage");
 const closeBtn = document.querySelector(".modal .close");
+const modalPrev = document.querySelector(".modal-prev");
+const modalNext = document.querySelector(".modal-next");
 
 // Responsive slides per view 
-let slidesToShow = 3; 
+let slidesToShow = 3;
 const updateSlidesToShow = () => {
     const width = window.innerWidth;
     if (width <= 600) slidesToShow = 1;
-    else if (width <= 992) slidesToShow = 2; 
+    else if (width <= 992) slidesToShow = 2;
     else slidesToShow = 3;
 };
 
@@ -118,17 +120,45 @@ window.addEventListener("resize", initGallery);
 initGallery();
 
 // Modal functionality
-galleryCards.forEach(card => {
+let modalIndex = 0;
+
+// Open modal with selected index
+const openModal = (index) => {
+    modalIndex = index;
+    modal.style.display = "flex";
+    modalImg.src = galleryCards[modalIndex].querySelector("img").src;
+};
+
+// Card click to open modal
+galleryCards.forEach((card, i) => {
     const img = card.querySelector("img");
-    img.addEventListener("click", () => {
-        modal.style.display = "flex";
-        modalImg.src = img.src;
-    });
+    img.addEventListener("click", () => openModal(i));
 });
 
+// Close modal
 closeBtn.addEventListener("click", () => modal.style.display = "none");
 modal.addEventListener("click", e => {
     if (e.target === modal) modal.style.display = "none";
+});
+
+// Modal next/prev
+modalNext.addEventListener("click", () => {
+    modalIndex = (modalIndex + 1) % galleryCards.length;
+    modalImg.src = galleryCards[modalIndex].querySelector("img").src;
+});
+
+modalPrev.addEventListener("click", () => {
+    modalIndex = (modalIndex - 1 + galleryCards.length) % galleryCards.length;
+    modalImg.src = galleryCards[modalIndex].querySelector("img").src;
+});
+
+// Keyboard navigation
+document.addEventListener("keydown", (e) => {
+    if (modal.style.display === "flex") {
+        if (e.key === "ArrowRight") modalNext.click();
+        if (e.key === "ArrowLeft") modalPrev.click();
+        if (e.key === "Escape") modal.style.display = "none";
+    }
 });
 
 
@@ -163,3 +193,51 @@ carousel.addEventListener("mouseleave", () => {
         moveToSlide(index + 1);
     }, 4000);
 });
+document.querySelectorAll('.review-card p').forEach(p => {
+        // Skip if a button is already present
+        if (p.nextElementSibling && p.nextElementSibling.classList.contains('more-btn')) {
+            return;
+        }
+        // Check if text is taller than collapsed height
+        if (p.scrollHeight > p.clientHeight) {
+            const btn = document.createElement('span');
+            btn.classList.add('more-btn');
+            btn.textContent = 'Read More';
+            p.insertAdjacentElement('afterend', btn);
+
+            btn.addEventListener('click', () => {
+                p.classList.toggle('expanded');
+                btn.textContent = p.classList.contains('expanded') ? "Read Less" : "Read More";
+            });
+        }
+    });
+    function timeAgo(dateString) {
+        const now = new Date();
+        const reviewDate = new Date(dateString);
+        const seconds = Math.floor((now - reviewDate) / 1000);
+
+        const intervals = [
+            { label: "year", seconds: 31536000 },
+            { label: "month", seconds: 2592000 },
+            { label: "week", seconds: 604800 },
+            { label: "day", seconds: 86400 },
+            { label: "hour", seconds: 3600 },
+            { label: "minute", seconds: 60 },
+            { label: "second", seconds: 1 }
+        ];
+
+        for (const interval of intervals) {
+            const count = Math.floor(seconds / interval.seconds);
+            if (count >= 1) {
+                return count === 1
+                    ? `1 ${interval.label} ago`
+                    : `${count} ${interval.label}s ago`;
+            }
+        }
+        return "just now";
+    }
+
+    document.querySelectorAll('.review-date').forEach(el => {
+        const date = el.getAttribute('data-date');
+        el.textContent = timeAgo(date);
+    });
